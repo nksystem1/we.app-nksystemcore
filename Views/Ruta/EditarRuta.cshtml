@@ -1,0 +1,128 @@
+﻿@model we.app_nksystemcore.Models.Ruta
+
+@{
+    ViewData["Title"] = "Actualizar Ruta";
+    ViewData["Accion"] = "Suministre informacion de la Ruta y Zona.";
+}
+@section Scripts {
+    <script src="~/js/funcionesruta.js"></script>
+}
+<div class="row">
+    <div class="col-lg-4">
+        <div class="panel">
+            <div class="panel-heading">
+                Datos Basicos de la Ruta
+            </div>
+            <div class="panel-body">
+                <form asp-action="EditarRuta">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="codigo" class="control-label"></label>
+                        <input asp-for="codigo" id="Txtcodigo" class="form-control" disabled />
+                        <span asp-validation-for="codigo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="nombre" class="control-label"></label>
+                        <input asp-for="nombre" id="Txtnombre" class="form-control" />
+                        <span asp-validation-for="nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Vendedor</label>
+
+                        <select class="form-control" asp-for="codigovendedor" id="Cmbvendedor">
+                            @foreach (var itemvendedor in ViewBag.Vendedores)
+                            {
+                                <option value="@itemvendedor.codigo">@itemvendedor.nombre</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Calle A1</label>
+                        <input asp-for="desdeuno" id="Txtdesdeuno" class="form-control" />
+                        <span asp-validation-for="desdeuno" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Calle A2</label>
+                        <input asp-for="hastauno" id="Txthastauno" class="form-control" />
+                        <span asp-validation-for="hastauno" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Calle B1</label>
+                        <input asp-for="desdedos" id="Txtdesdedos" class="form-control" />
+                        <span asp-validation-for="desdedos" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Calle B2</label>
+                        <input asp-for="hastados" id="Txthastados" class="form-control" />
+                        <span asp-validation-for="hastados" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="button" id="btnactualizarruta" value="Actualizar" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="panel">
+            <div class="panel-body">
+
+                <div class="modal-example">
+
+                    <style>
+                        /* Local style only for demo purpose */
+                        .modal-example .modal {
+                            position: relative;
+                            top: auto;
+                            right: auto;
+                            bottom: auto;
+                            left: auto;
+                            z-index: 1;
+                            display: block;
+                        }
+                    </style>
+
+                    <div class="modal" id="myModal3" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <h4 class="m-t-none">Asignar Zona</h4>
+                                    <p>Seleccione la Zona a la que pertenece la Ruta..</p>
+
+
+                                    <table class="table m-t-md" id="tablacomisiones">
+                                        <thead>
+                                            <tr>
+                                                <th>Seleccion</th>
+                                                <th>Codigo</th>
+                                                <th>Nombre</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var itemzona in ViewBag.Zonas)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <input asp-for="codigozona" type="radio" name="optionsRadios" id="@itemzona.codzona" value="@itemzona.codzona">
+                                                    </td>
+                                                    <td>@itemzona.codzona</td>
+                                                    <td>@itemzona.nomzona</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="ListarRuta">Regresar a la Lista</a>
+</div>

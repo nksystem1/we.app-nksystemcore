@@ -1,0 +1,187 @@
+﻿@model we.app_nksystemcore.Models.Vendedor
+
+@{
+    ViewData["Title"] = "Actualizar Vendedor";
+    ViewData["Accion"] = "Suministre informacion del Vendedor y sus comisiones.";
+}
+@section Scripts {
+    <script src="~/js/funcionesvendedor.js"></script>
+}
+
+<div id="panel1" class="panel panel-filled">
+    <div class="loader">
+        <div class="loader-dots"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel">
+                <div class="panel-heading">
+                    Datos Basicos de Vendedor
+                </div>
+                <div class="panel-body">
+                    <form name="frmmodficarvendedor">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="codigo" class="control-label"></label>
+                            <input asp-for="codigo" id="Txtcodigo" class="form-control" disabled />
+                            <span asp-validation-for="codigo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="nombre" class="control-label"></label>
+                            <input asp-for="nombre" id="Txtnombre" class="form-control" />
+                            <span asp-validation-for="nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Direccion</label>
+                            <input asp-for="direccionfiscal" id="Txtdireccion" class="form-control" />
+                            <span asp-validation-for="direccionfiscal" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input asp-for="correoe" id="Txtemail" class="form-control" />
+                            <span asp-validation-for="correoe" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Monto Meta</label>
+                            <input asp-for="montometa" id="Txtmontometa" name="Txtmontometa" class="form-control" />
+                            <span asp-validation-for="montometa" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" id="Interno" value="">
+                            <label class="control-label"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" id="Cobrador" value="">
+                            <label class="control-label"></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" value="Actualizar" id="btnactualizar" name="btnactualizar" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="panel">
+                <div class="panel-body">
+
+                    <div class="modal-example">
+
+                        <style>
+                            /* Local style only for demo purpose */
+                            .modal-example .modal {
+                                position: relative;
+                                top: auto;
+                                right: auto;
+                                bottom: auto;
+                                left: auto;
+                                z-index: 1;
+                                display: block;
+                            }
+                        </style>
+
+                        <div class="modal" id="myModal3" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h4 class="m-t-none">Asignar Comisiones</h4>
+                                        <p>Registre las comisiones del vendedor por metas cumplidas por ventas..</p>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <small class="stat-label">Hoy</small>
+                                                <h4 class="m-t-xs">170,20 <i class="fa fa-level-up text-accent"></i></h4>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <small class="stat-label">Mes Actual %</small>
+                                                <h4 class="m-t-xs">%20,20 <i class="fa fa-level-down c-white"></i></h4>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <small class="stat-label">Mes Anterior</small>
+                                                <h4 class="m-t-xs">246,40 <i class="fa fa-level-up text-accent"></i></h4>
+                                            </div>
+                                        </div>
+                                        <div class="progress m-t-xs full progress-small">
+                                            <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class=" progress-bar progress-bar-warning">
+                                                <span class="sr-only">65% Complete (success)</span>
+                                            </div>
+                                        </div>
+                                        <table class="table m-t-md" id="tablacomisiones">
+                                            <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>% Inferior</th>
+                                                    <th>% Superior</th>
+                                                    <th>% Comision</th>
+                                                    <th>Accion</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var comision in Model.lstComisiones)
+                                                {
+                                                    <tr>
+                                                        <td class="nr">@Html.DisplayFor(modelitem => comision.id)</td>
+                                                        <td>@Html.DisplayFor(modelitem => comision.porcentajeinferior)</td>
+                                                        <td>@Html.DisplayFor(modelitem => comision.porcentajesuperior)</td>
+                                                        <td>@Html.DisplayFor(modelitem => comision.porcentajecomisionvendedor)</td>
+                                                        <td> <button type="button" class="btn-default">Quitar</button></td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-accent" data-toggle="modal" data-target="#Mymodalcomision">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Mymodalcomision" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title">Asignacion de Comision</h4>
+                        <small>Lorem Ipsum is simply dummy text.</small>
+                    </div>
+                    <div class="modal-body">
+
+                        <form name="frmAgregarComision" asp-action="AgregarComision">
+                            <div class="form-group">
+                                <label for="exampleInputName">% Inferior</label>
+                                <input type="number" class="form-control" id="Porcinferior" placeholder="% Inferior">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">% Superior</label>
+                                <input type="number" class="form-control" id="Porcsuperior" placeholder="% Superior">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">% Comision</label>
+                                <input type="number" class="form-control" id="Porccomision" placeholder="% Comision">
+                                <p class="form-text">Example block-level help text here.</p>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" id="btnagregar" name="btnagregar" class="btn btn-accent">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListarVendedor">Regresar a la Lista</a>
+</div>

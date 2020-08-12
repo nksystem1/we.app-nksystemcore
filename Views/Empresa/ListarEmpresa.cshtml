@@ -1,0 +1,96 @@
+﻿@model IEnumerable<web.appcore_nksystem.Models.Negocio>
+
+@{
+    ViewData["Title"] = "Listado de Empresas";
+    ViewData["Accion"] = "Acciones de Empresa";
+}
+
+@section Scripts {
+
+}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-filled">
+                <div class="panel-heading">
+
+                </div>
+                <div class="panel-body">
+
+                    <p>
+                        @Html.ActionLink("Crear Empresa", "CrearEmpresa")
+                    </p>
+
+
+                    <table id="tableExample3" class="table table-striped table-hover table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Codnegocio)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Direccion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Telefono)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Contribuyente)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Activa)
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Codnegocio)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Direccion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Telefono)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Contribuyente)
+                                    </td>
+                                    <td>
+                                        <span class="label label-accent">Active</span>
+
+                                    </td>
+                                    <td>
+                                        <a href="#"><i class="fa fa-folder"></i></a>
+                                        <a href="#"><i class="fa fa-edit"></i></a>
+                                        <a href="#"><i class="fa fa-trash-o"></i></a>
+
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>

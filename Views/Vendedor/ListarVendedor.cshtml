@@ -1,0 +1,92 @@
+﻿@model IEnumerable<we.app_nksystemcore.Models.Vendedor>
+
+@{
+    ViewData["Title"] = "Listado de Vendedores";
+    ViewData["Accion"] = "Acciones de Vendedor";
+}
+@section Scripts {
+    <script src="~/js/funcionesvendedor.js"></script>
+}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-filled">
+                <div class="panel-heading">
+                </div>
+                <div class="panel-body">
+                    <p>
+                        @Html.ActionLink("Crear Vendedor", "CrearVendedor")
+                    </p>
+
+                    <table id="tableExample3" class="table table-striped table-hover table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Codigo
+                                </th>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Interno
+                                </th>
+                                <th>
+                                    Cobrador
+                                </th>
+                                <th>
+                                    Direccion
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Monto Meta
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.codigo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.interno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.cobrador)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.direccionfiscal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.correoe)
+                                    </td>
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.montometa)
+                                    </td>
+
+                                    <td>
+
+                                        <a href="@Url.Action("MostrarVendedor","Vendedor", new { vendedorId =  item.codigo})"><i class="fa fa-folder"></i></a>
+                                        <a href="@Url.Action("ModificarVendedor", "Vendedor", new { vendedorId =  item.codigo})"><i class="fa fa-edit"></i></a>
+                                        <a href="#"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+

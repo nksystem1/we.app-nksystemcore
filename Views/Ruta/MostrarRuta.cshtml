@@ -1,0 +1,113 @@
+﻿@model we.app_nksystemcore.Models.Ruta
+
+@{
+    ViewData["Title"] = "Visualizar Informacion Ruta";
+    ViewData["Accion"] = "Consulta la informacion de la Ruta.";
+}
+@section Scripts {
+    <script src="~/js/funcionesruta.js"></script>
+}
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="panel">
+            <div class="panel-heading">
+                Datos Basicos de Vendedor
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="exampleInput">Codigo</label>
+                    <input class="form-control" id="disabledInput" type="text" value="@Html.DisplayFor(model => model.codigo)" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputName">Nombre</label>
+                    <input class="form-control" id="disabledInput" type="text" value="@Html.DisplayFor(model => model.nombre)" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputName">Calle A1</label>
+                    <input class="form-control" id="disabledInput" type="text" value="@Html.DisplayFor(model => model.desdeuno)" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputName">Calle A2</label>
+                    <input class="form-control" id="disabledInput" type="text" value="@Html.DisplayFor(model => model.hastauno)" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputName">Calle B1</label>
+                    <input class="form-control" id="disabledInput" type="text" value="@Html.DisplayFor(model => model.desdedos)" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputName">Calle B2</label>
+                    <input class="form-control" id="disabledInput" type="text" value="@Html.DisplayFor(model => model.hastados)" disabled>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="modal-example">
+                    <style>
+                        /* Local style only for demo purpose */
+                        .modal-example .modal {
+                            position: relative;
+                            top: auto;
+                            right: auto;
+                            bottom: auto;
+                            left: auto;
+                            z-index: 1;
+                            display: block;
+                        }
+                    </style>
+                    <div class="modal" id="myModal3" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <h4 class="m-t-none">Informacion de Zona y Vendedor</h4>
+                                    <p>Muestra la informacion del Vendedor que visita dicha ruta y a que Zona pertenece..</p>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <small class="stat-label">Codigo</small>
+                                            <h4 class="m-t-xs">@Html.DisplayFor(model => model.zona.codzona)</h4>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <small class="stat-label">Zona</small>
+                                            <h4 class="m-t-xs">@Html.DisplayFor(model => model.zona.nomzona)</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <small class="stat-label">Codigo</small>
+                                            <h4 class="m-t-xs">@Html.DisplayFor(model => model.vendedor.codigo)</h4>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <small class="stat-label">Vendedor</small>
+                                            <h4 class="m-t-xs">@Html.DisplayFor(model => model.vendedor.nombre)</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Editar", "EditarRuta", new { /*model => model.Codigo */}) |
+        <a asp-action="ListarRuta">Regresar a la Lista</a>
+    </div>
+</div>
+

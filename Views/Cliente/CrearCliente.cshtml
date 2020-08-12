@@ -1,0 +1,218 @@
+﻿@model web.appcore_nksystem.Models.Cliente
+
+@{
+    ViewData["Title"] = "Registrar Cliente";
+    ViewData["Accion"] = "Suministre informacion del Cliente.";
+}
+@section Scripts {
+    <script src="~/js/funcionescliente.js"></script>
+}
+
+<div id="panel1" class="panel panel-filled">
+    <div class="loader">
+        <div class="loader-dots"></div>
+    </div>
+
+    <form asp-action="CrearCliente">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-filled">
+                    <div class="panel-heading">                       
+                        Datos Basicos
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">NIT/RUT</label>
+                                    <input asp-for="rif" class="form-control" />
+                                    <span asp-validation-for="rif" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="form-group">
+                                    <label class="control-label">Nombre</label>
+                                    <input asp-for="nombre" class="form-control" />
+                                    <span asp-validation-for="nombre" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Telefono Movil</label>
+                                    <input asp-for="telefonomovil" class="form-control" />
+                                    <span asp-validation-for="telefonomovil" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Telefono Fijo</label>
+                                    <input asp-for="telefonofijo1" class="form-control" />
+                                    <span asp-validation-for="telefonofijo1" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Email</label>
+                                    <input asp-for="correoe" class="form-control" />
+                                    <span asp-validation-for="correoe" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tabs-container">
+
+                    <div class="tabs-left">
+                        <ul class="nav nav-tabs">
+                            <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> Datos Basicos</a></li>
+                            <li><a class="nav-link" data-toggle="tab" href="#tab-2">This is second tab</a></li>
+                        </ul>
+                        <div class="tab-content ">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="codcliente" class="control-label"></label>
+                                        <input asp-for="codcliente" class="form-control" />
+                                        <span asp-validation-for="codcliente" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="codgrupo" class="control-label"></label>
+                                        <input asp-for="codgrupo" class="form-control" />
+                                        <span asp-validation-for="codgrupo" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="codvendedor" class="control-label"></label>
+                                        <input asp-for="codvendedor" class="form-control" />
+                                        <span asp-validation-for="codvendedor" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="cedula" class="control-label"></label>
+                                        <input asp-for="cedula" class="form-control" />
+                                        <span asp-validation-for="cedula" class="text-danger"></span>
+                                    </div>
+                                    
+                                   
+                                    <div class="form-group">
+                                        <label asp-for="telefonofijo2" class="control-label"></label>
+                                        <input asp-for="telefonofijo2" class="form-control" />
+                                        <span asp-validation-for="telefonofijo2" class="text-danger"></span>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label asp-for="telefonofax" class="control-label"></label>
+                                        <input asp-for="telefonofax" class="form-control" />
+                                        <span asp-validation-for="telefonofax" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="direccionfiscal" class="control-label"></label>
+                                        <input asp-for="direccionfiscal" class="form-control" />
+                                        <span asp-validation-for="direccionfiscal" class="text-danger"></span>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label asp-for="paginaweb" class="control-label"></label>
+                                        <input asp-for="paginaweb" class="form-control" />
+                                        <span asp-validation-for="paginaweb" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="tipopersona" class="control-label"></label>
+                                        <input asp-for="tipopersona" class="form-control" />
+                                        <span asp-validation-for="tipopersona" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="plazocredito" class="control-label"></label>
+                                        <input asp-for="plazocredito" class="form-control" />
+                                        <span asp-validation-for="plazocredito" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="montocredito" class="control-label"></label>
+                                        <input asp-for="montocredito" class="form-control" />
+                                        <span asp-validation-for="montocredito" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="tipocredito" class="control-label"></label>
+                                        <input asp-for="tipocredito" class="form-control" />
+                                        <span asp-validation-for="tipocredito" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="unidadplazocredito" class="control-label"></label>
+                                        <input asp-for="unidadplazocredito" class="form-control" />
+                                        <span asp-validation-for="unidadplazocredito" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="status" class="control-label"></label>
+                                        <input asp-for="status" class="form-control" />
+                                        <span asp-validation-for="status" class="text-danger"></span>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label asp-for="regimeniva" class="control-label"></label>
+                                        <input asp-for="regimeniva" class="form-control" />
+                                        <span asp-validation-for="regimeniva" class="text-danger"></span>
+                                    </div>                                   
+                                   
+                                    <div class="form-group">
+                                        <label asp-for="tarifa" class="control-label"></label>
+                                        <input asp-for="tarifa" class="form-control" />
+                                        <span asp-validation-for="tarifa" class="text-danger"></span>
+                                    </div>
+                                  
+                                    <div class="form-group">
+                                        <label asp-for="contribuyente" class="control-label"></label>
+                                        <input asp-for="contribuyente" class="form-control" />
+                                        <span asp-validation-for="contribuyente" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="codigoruta" class="control-label"></label>
+                                        <input asp-for="codigoruta" class="form-control" />
+                                        <span asp-validation-for="codigoruta" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong class="c-white">Donec quam felis</strong>
+
+                                    <p>
+                                        Thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects
+                                        and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath
+                                    </p>
+
+                                    <p>
+                                        I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite
+                                        sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--FIN DEL TAB CONTAINER-->
+            </div>
+        </div>
+
+        <!-- End main content-->
+    </form>
+
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

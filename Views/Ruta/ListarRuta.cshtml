@@ -1,0 +1,90 @@
+﻿@model IEnumerable<we.app_nksystemcore.Models.Ruta>
+
+@{
+    ViewData["Title"] = "Listado de Rutas";
+    ViewData["Accion"] = "Acciones de las Rutas";
+}
+@section Scripts {
+    <script src="~/js/funcionesruta.js"></script>
+}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-filled">
+                <div class="panel-heading">
+                </div>
+                <div class="panel-body">
+                    <p>
+                        @Html.ActionLink("Crear Ruta", "CrearRuta")
+                    </p>
+
+                    <table id="tableExample3" class="table table-striped table-hover table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Zona
+                                </th>
+                                <th>
+                                    Ruta
+                                </th>
+                                <th>
+                                    Vendedor
+                                </th>
+                                <th>
+                                    Calle A1
+                                </th>
+                                <th>
+                                    Calle A2
+                                </th>
+                                <th>
+                                    Calle B1
+                                </th>
+                                <th>
+                                    Calle B2
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.zona.nomzona)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.vendedor.nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.desdeuno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.hastauno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.desdedos)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.hastados)
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("MostrarRuta","Ruta", new { RutaId = item.codigo})"><i class="fa fa-folder"></i></a>
+                                        <a href="@Url.Action("EditarRuta","Ruta", new { RutaId = item.codigo})"><i class="fa fa-edit"></i></a>
+                                        <a href="#"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+
+

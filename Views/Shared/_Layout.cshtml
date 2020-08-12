@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!--Page title -->
+    <title>Nk-System | Software Administrativo Contable</title>
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="~/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/datatables.min.css" type="text/css" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="~/css/pe-icons/pe-icon-7-stroke.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/pe-icons/helper.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/stroke-icons/style.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/toastr.min.css" />
+</head>
+<body>
+
+    <!-- Wrapper-->
+    <div class="wrapper">
+
+        <!-- Header-->
+        <nav class="navbar navbar-expand-md navbar-default fixed-top">
+            <div class="navbar-header">
+                <div id="mobile-menu">
+                    <div class="left-nav-toggle">
+                        <a href="#">
+                            <i class="stroke-hamburgermenu"></i>
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-brand" href="index.html">
+                    Nk-System
+                    <span>v.1.4</span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="left-nav-toggle">
+                    <a href="">
+                        <i class="stroke-hamburgermenu"></i>
+                    </a>
+                </div>
+                <form class="navbar-form  mr-auto">
+                    <input type="text" class="form-control" placeholder="Search data for analysis" style="width: 175px">
+                </form>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item uppercase-link">
+                        <a href="versions.html" class="nav-link">
+                            Versions
+                            <span class="label label-warning pull-right">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item profil-link">
+                        <a href="login.html">
+                            <span class="profile-address">luna@company.io</span>
+                            <img src="~/Images/profile.jpg" class="rounded-circle" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End header-->
+        <!-- Navigation-->
+        <aside class="navigation">
+            <nav>
+                <ul class="nav luna-nav">
+                    <li class="nav-category">
+                        Menu
+                    </li>
+                    <li>
+                        @Html.ActionLink("Inicio", "Main", "Home")
+                    </li>
+
+                    <li class="nav-category">
+                        Ventas
+                    </li>
+                    <li class="active">
+                        <a href="#uibasicoventas" data-toggle="collapse" aria-expanded="false">
+                            General<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
+                        </a>
+                        <ul id="uibasicoventas" class="nav nav-second collapse">
+                            <li>@Html.ActionLink("Clientes", "ListarCliente", "Cliente")</li>
+                            <li>@Html.ActionLink("Rutas", "ListarRuta", "Ruta")</li>
+                            <li>@Html.ActionLink("Vendedor", "ListarVendedor", "Vendedor")</li>
+                            <li>@Html.ActionLink("Zonas", "ListarZonas", "Zona")</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#uiprocesoventas" data-toggle="collapse" aria-expanded="false">
+                            Procesos<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
+                        </a>
+                        <ul id="uiprocesoventas" class="nav nav-second collapse">
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#uichartsventas" data-toggle="collapse" aria-expanded="false">
+                            Reportes y Graficos<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
+                        </a>
+                        <ul id="uichartsventas" class="nav nav-second collapse">
+                            <li><a href="flotCharts.html">Listado de Vendedores</a></li>
+                            <li><a href="chartJs.html">Listado de Zonas</a></li>
+                            <li><a href="sparkline.html">Rutas por Vendedor</a></li>
+                            <li><a href="sparkline.html">Clientes por Ruta</a></li>
+                            <li>@Html.ActionLink("Reportes", "Invoice", "Ruta")</li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-category">
+                        Configuracion
+                    </li>
+                    <li class="active">
+                        <a href="#uibasicoconfig" data-toggle="collapse" aria-expanded="false">
+                            General<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
+                        </a>
+                        <ul id="uibasicoconfig" class="nav nav-second collapse">
+                            <li>@Html.ActionLink("Empresas", "ListarEmpresa", "Empresa")</li>
+                            <li>@Html.ActionLink("Usuarios", "ListarUsuario", "Usuario")</li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">1</span>
+                            Cambiar Clave
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">1</span>
+                            Cerrar Sesion
+                        </a>
+                    </li>
+                    <li class="nav-info">
+                        <i class="pe pe-7s-shield text-accent"></i>
+
+                        <div class="m-t-xs">
+                            <span class="c-white">Nk-System</span> Software Administrativo, Contable que te permite llevar el control de tu empresa.
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- End navigation-->
+        <!-- Main content-->
+        <section class="content">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="view-header">
+                            <div class="pull-right header-icon">
+                                <!--<i class="pe page-header-icon pe-7s-plus"></i>-->
+                            </div>
+                            <div class="header-icon">
+                                <i class="pe page-header-icon pe-7s-menu"></i>
+                            </div>
+                            <div class="header-title">
+                                <h3>@ViewData["Title"]</h3>
+                                <small>
+                                    @ViewData["Accion"].
+                                </small>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                @RenderBody()
+
+            </div>
+        </section>
+        <!-- End main content-->
+
+    </div>
+    <!-- End wrapper-->
+    <!-- Vendor scripts -->
+    <script src="~/js/pace.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/datatables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/js/toastr.min.js"></script>
+
+    <!-- App scripts -->
+    <script src="~/js/luna.js"></script>
+    @RenderSection("Scripts", required: false)
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('#tableExample3').DataTable({
+                dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                buttons: [
+                    { extend: 'copy', className: 'btn-sm' },
+                    { extend: 'csv', title: 'ExampleFile', className: 'btn-sm' },
+                    { extend: 'pdf', title: 'ExampleFile', className: 'btn-sm' },
+                    { extend: 'print', className: 'btn-sm' }
+                ]
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

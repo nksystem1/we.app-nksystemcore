@@ -1,0 +1,87 @@
+﻿@model IEnumerable<web.appcore_nksystem.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Listado de Clientes";
+    ViewData["Accion"] = "Acciones de los Clientes";
+}
+<!-- App scripts -->
+
+@section Scripts {
+    <script src="~/js/funcionescliente.js"></script>
+}
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-filled">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <p>
+                    @Html.ActionLink("Crear Cliente", "CrearCliente")
+                </p>
+
+                <table id="tableExample3" class="table table-striped table-hover table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                NIT/RUT
+                            </th>
+                            <th>
+                                Nombre
+                            </th>
+
+                            <th>
+                                Telefonos
+                            </th>
+
+                            <th>
+                                Direccion
+                            </th>
+
+                            <th>
+                                Ruta
+                            </th>
+
+
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.rif)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.telefonomovil)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.direccionfiscal)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ruta.nombre)
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("MostrarCliente","Cliente", new { ClienteId = item.codcliente})"><i class="fa fa-folder"></i></a>
+                                    <a href="@Url.Action("EditarCliente" ,"Cliente", new { ClienteId = item.codcliente})"><i class="fa fa-edit"></i></a>
+                                    <a href="#"><i class="fa fa-trash-o"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
