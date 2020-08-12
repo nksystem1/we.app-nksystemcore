@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ogx75wwGPYWFy272F95XBwe7+X5wdHMZoPqjfBssw1cXcnOZgixDPR2dti5noPpGkVPfYk64kTDjlcvKzNd2iA==",
+  "dgSpecHash": "zwpyJ9BWcAG1v2VWBH9fA3iNW6pIP3xmAINrUI5tdmp2KmcuydG/0FHUREBGVfb7soDZ1omoR4gss9n825HWpw==",
   "success": true,
-  "projectFilePath": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
+  "projectFilePath": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aarau\\.nuget\\packages\\dinktopdf\\1.0.8\\dinktopdf.1.0.8.nupkg.sha512",
     "C:\\Users\\aarau\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

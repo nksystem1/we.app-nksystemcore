@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {}
+    "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {}
   },
   "projects": {
-    "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {
+    "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
+        "projectUniqueName": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
         "projectName": "web.app-nksystemcore",
-        "projectPath": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
+        "projectPath": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
         "packagesPath": "C:\\Users\\aarau\\.nuget\\packages\\",
-        "outputPath": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\obj\\",
+        "outputPath": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
