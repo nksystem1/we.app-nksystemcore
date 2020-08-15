@@ -6,9 +6,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Cliente\CrearCliente.cshtml" />
+    <Content Remove="Views\Cliente\ListarCliente.cshtml" />
+    <Content Remove="Views\Empresa\ListarEmpresa.cshtml" />
+    <Content Remove="Views\Ruta\CrearRuta.cshtml" />
+    <Content Remove="Views\Ruta\EditarRuta.cshtml" />
+    <Content Remove="Views\Ruta\ListarRuta.cshtml" />
+    <Content Remove="Views\Ruta\MostrarRuta.cshtml" />
+    <Content Remove="Views\Usuario\ListarUsuario.cshtml" />
+    <Content Remove="Views\Vendedor\CrearVendedor.cshtml" />
+    <Content Remove="Views\Vendedor\ListarVendedor.cshtml" />
+    <Content Remove="Views\Vendedor\ModificarVendedor.cshtml" />
+    <Content Remove="Views\Vendedor\MostrarVendedor.cshtml" />
+    <Content Remove="Views\Zona\ListarZonas.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
@@ -21,7 +37,14 @@
 
   <ItemGroup>
     <Folder Include="Connected Services\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\Almacen\" />
+    <Folder Include="Views\Cliente\" />
+    <Folder Include="Views\Empresa\" />
+    <Folder Include="Views\Ruta\" />
+    <Folder Include="Views\Usuario\" />
+    <Folder Include="Views\Vendedor\" />
+    <Folder Include="Views\Zona\" />
     <Folder Include="wwwroot\js\Almacen\" />
     <Folder Include="wwwroot\js\Cliente\" />
     <Folder Include="wwwroot\js\Empresa\" />
@@ -30,6 +53,12 @@
     <Folder Include="wwwroot\js\Vendedor\" />
     <Folder Include="wwwroot\js\Usuario\" />
     <Folder Include="wwwroot\js\Ruta\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="we.app-model">
+      <HintPath>..\we.app-model\bin\Debug\we.app-model.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 

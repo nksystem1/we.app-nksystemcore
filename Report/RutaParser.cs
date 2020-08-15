@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using we.app_nksystemcore.ConectionService;
 using we.app_nksystemcore.ConectionService.Implementation;
-using we.app_nksystemcore.Models;
+using we.app_model.Data;
 
 namespace we.app_nksystemcore.Report
 {

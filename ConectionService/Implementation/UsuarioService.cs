@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using we.app_nksystemcore.Models;
+using we.app_model.Data;
 using we.app_nksystemcore.Utilities;
 
 namespace we.app_nksystemcore.ConectionService.Implementation

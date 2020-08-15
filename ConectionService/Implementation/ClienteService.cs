@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using we.app_nksystemcore.Utilities;
-using web.appcore_nksystem.Models;
+using we.app_model.Data;
 
 namespace we.app_nksystemcore.ConectionService.Implementation
 {

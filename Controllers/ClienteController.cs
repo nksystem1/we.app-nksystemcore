@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using we.app_nksystemcore.ConectionService;
-using web.appcore_nksystem.Models;
+using we.app_model.Data;
 
 namespace we.app_nksystemcore.Controllers
 {

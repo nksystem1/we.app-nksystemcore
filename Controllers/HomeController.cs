@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using we.app_nksystemcore.Models;
+using we.app_model.Data;
 
 namespace we.app_nksystemcore.Controllers
 {

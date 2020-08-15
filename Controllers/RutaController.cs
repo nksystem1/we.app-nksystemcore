@@ -8,7 +8,7 @@ using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using we.app_nksystemcore.ConectionService;
-using we.app_nksystemcore.Models;
+using we.app_model.Data;
 using we.app_nksystemcore.Report;
 
 namespace we.app_nksystemcore.Controllers

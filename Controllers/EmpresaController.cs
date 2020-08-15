@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using we.app_nksystemcore.ConectionService;
 using we.app_nksystemcore.ConectionService.Implementation;
-using web.appcore_nksystem.Models;
+using we.app_model.Data;
 
 
 namespace web.appcore_nksystem.Controllers
