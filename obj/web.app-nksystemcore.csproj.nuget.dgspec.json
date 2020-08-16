@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {}
+    "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {}
   },
   "projects": {
-    "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {
+    "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
+        "projectUniqueName": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
         "projectName": "web.app-nksystemcore",
-        "projectPath": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
-        "packagesPath": "C:\\Users\\aarau\\.nuget\\packages\\",
-        "outputPath": "C:\\Nk-System Consultores SCA\\Proyectos\\Spring-Boot\\we.app-nksystemcore\\obj\\",
+        "projectPath": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\web.app-nksystemcore.csproj",
+        "packagesPath": "C:\\Users\\maite\\.nuget\\packages\\",
+        "outputPath": "C:\\Nk-System Consultores SCA\\Proyectos\\we.app-nksystemcore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\aarau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maite\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
