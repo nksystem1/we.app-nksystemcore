@@ -385,3 +385,11 @@ C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug
 C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\staticwebassets\web.app-nksystemcore.StaticWebAssets.xml
 C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\web.app-nksystemcore.genruntimeconfig.cache
 C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\web.app-nksystemcore.csprojAssemblyReference.cache
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\ListarCliente.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\CrearCliente.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\ListarEmpresa.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Ruta\CrearRuta.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Ruta\EditarRuta.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Ruta\ListarRuta.cshtml.g.cs
+C:\Nk-System Consultores SCA\Proyectos\Spring-Boot\we.app-nksystemcore\obj\Debug\netcoreapp3.1\Razor\Views\Ruta\MostrarRuta.cshtml.g.cs
